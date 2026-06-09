@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Photo chantier a ajouter</title>
+  <desc id="desc">Emplacement reserve pour une photo reelle d'intervention France Solaire</desc>
+  <rect width="1200" height="760" fill="#eef3ef"/>
+  <rect x="70" y="70" width="1060" height="620" rx="12" fill="#ffffff" stroke="#d9e2dc" stroke-width="4"/>
+  <path d="M170 520 L470 260 L650 420 L760 330 L1030 520" fill="none" stroke="#1f7a5a" stroke-width="18" stroke-linejoin="round"/>
+  <circle cx="850" cy="235" r="58" fill="#c64f2b"/>
+  <text x="600" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#26333f">Photo chantier a ajouter</text>
+</svg>

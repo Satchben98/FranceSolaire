@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://france-solaire-paca.vercel.app/sitemap.xml

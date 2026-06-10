@@ -2,6 +2,9 @@
 
 Site statique orienté SEO local et conversion, hébergé sur Vercel.
 
+- Contact commercial : `06 22 51 17 40`
+- Zone : toute la Région Sud, avec étude des chantiers jusqu’à environ 4 h de Marseille
+
 ## Lancer en local
 
 ```bash
@@ -29,7 +32,7 @@ Puis ouvrir `http://localhost:8080`.
 ## A personnaliser avant mise en ligne
 
 - Remplacer `https://france-solaire-paca.vercel.app` si le domaine final est different.
-- Ajouter telephone, email et adresse professionnelle exacte.
+- Ajouter l’email et l’adresse professionnelle exacte.
 - Remplacer les emplacements visuels par des photos reelles avant/apres.
 - Exécuter `supabase/schema.sql` dans le projet Supabase.
 - Définir `SUPABASE_URL` et `SUPABASE_SERVICE_ROLE_KEY` dans Vercel.

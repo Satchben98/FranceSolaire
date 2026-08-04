@@ -73,36 +73,43 @@ img {
 }
 
 .brand {
-  display: grid;
-  grid-template-columns: 36px auto;
-  grid-template-rows: auto auto;
-  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
-  font-weight: 850;
   letter-spacing: 0;
   color: var(--steel);
   white-space: nowrap;
 }
 
-.brand::before {
-  content: "";
-  grid-row: 1 / 3;
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  background:
-    linear-gradient(90deg, transparent 47%, rgba(255,255,255,.72) 48%, rgba(255,255,255,.72) 52%, transparent 53%),
-    linear-gradient(transparent 47%, rgba(255,255,255,.72) 48%, rgba(255,255,255,.72) 52%, transparent 53%),
-    linear-gradient(145deg, var(--accent) 0 70%, var(--signal) 70%);
-  box-shadow: 0 8px 18px rgba(21, 84, 63, .16);
+.parent-brand-logo {
+  width: 96px;
+  height: 48px;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  object-fit: cover;
 }
 
-.brand span {
-  grid-column: 2;
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
+.brand-copy {
+  display: grid;
+  gap: 3px;
+  line-height: 1;
+}
+
+.brand-copy strong {
+  color: var(--steel);
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -.035em;
+}
+
+.brand-copy small {
+  color: var(--accent-dark);
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: .075em;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -1159,25 +1166,33 @@ textarea {
   }
 
   .brand {
-    grid-template-columns: 30px auto;
-    column-gap: 8px;
-  }
-
-  .brand::before {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-  }
-
-  .brand {
+    gap: 8px;
     white-space: normal;
     line-height: 1.12;
-    max-width: 48%;
+    max-width: 58%;
   }
 
-  .brand span,
   .nav-links a:not(.button, .phone-link) {
     display: none;
+  }
+
+  .parent-brand-logo {
+    width: 72px;
+    height: 36px;
+    border-radius: 5px;
+  }
+
+  .brand-copy {
+    gap: 2px;
+  }
+
+  .brand-copy strong {
+    font-size: 15px;
+  }
+
+  .brand-copy small {
+    font-size: 7px;
+    letter-spacing: .045em;
   }
 
   .nav-links .phone-link {
@@ -1234,7 +1249,23 @@ textarea {
   }
 
   .brand {
-    max-width: 45%;
+    max-width: 60%;
+  }
+
+  .parent-brand-logo {
+    width: 66px;
+    height: 33px;
+  }
+
+  .brand-copy strong {
+    font-size: 14px;
+  }
+
+  .brand-copy small {
+    max-width: 86px;
+    font-size: 6.5px;
+    line-height: 1.15;
+    white-space: normal;
   }
 
   .trust-row {

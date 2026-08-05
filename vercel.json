@@ -1,5 +1,37 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/nettoyage-panneaux-solaires/:path*",
+      "destination": "/solution-roof-cool/",
+      "permanent": true
+    },
+    {
+      "source": "/nettoyage-toitures-industrielles/:path*",
+      "destination": "/applications-supports/",
+      "permanent": true
+    },
+    {
+      "source": "/zones-intervention/marseille/:path*",
+      "destination": "/zones-intervention/",
+      "permanent": true
+    },
+    {
+      "source": "/zones-intervention/aix-en-provence/:path*",
+      "destination": "/zones-intervention/",
+      "permanent": true
+    },
+    {
+      "source": "/zones-intervention/bouches-du-rhone/:path*",
+      "destination": "/zones-intervention/",
+      "permanent": true
+    },
+    {
+      "source": "/zones-intervention/paca/:path*",
+      "destination": "/zones-intervention/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://france-solaire-paca.vercel.app/sitemap.xml
+Sitemap: https://france-toiture-reflechissante.fr/sitemap.xml

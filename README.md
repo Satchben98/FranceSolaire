@@ -1,9 +1,11 @@
-# Site France Solaire - nettoyage panneaux solaires et toitures industrielles
+# France Toiture Réfléchissante
 
-Site statique orienté SEO local et conversion, hébergé sur Vercel.
+Site statique de l’offre Cool Roof professionnelle de France Traçage, orienté bâtiments industriels, logistiques et publics en PACA.
 
-- Contact commercial : `06 22 51 17 40`
-- Zone : toute la Région Sud, avec étude des chantiers jusqu’à environ 4 h de Marseille
+- Téléphone : `06 22 51 17 40`
+- Email : `francetracage@gmail.com`
+- Adresse : 1801 Route Nationale 8, 13400 Aubagne
+- Domaine prévu : `https://france-toiture-reflechissante.fr`
 
 ## Lancer en local
 
@@ -14,38 +16,24 @@ python3 -m http.server 8080
 
 Puis ouvrir `http://localhost:8080`.
 
-## Structure
+## Pages
 
-- `index.html` : accueil
-- `nettoyage-panneaux-solaires/` : service photovoltaïque
-- `nettoyage-toitures-industrielles/` : service toitures industrielles
-- `methode-securite/` : methode, securite, exploitation
-- `realisations/` : preuves terrain a enrichir
-- `zones-intervention/` : hub local
-- `zones-intervention/marseille/`
-- `zones-intervention/aix-en-provence/`
-- `zones-intervention/bouches-du-rhone/`
-- `zones-intervention/paca/`
-- `contact/` : demande de devis
-- `merci/` : page de confirmation
+- `/` : accueil et conversion
+- `/solution-roof-cool/` : principe du Cool Roof
+- `/performances/` : indicateurs et limites
+- `/applications-supports/` : bâtiments et supports
+- `/methode-securite/` : protocole chantier
+- `/realisations/` : chantier de Sanary et futurs cas clients
+- `/zones-intervention/` : PACA et grands projets hors région
+- `/contact/` : demande d’étude
 
-## A personnaliser avant mise en ligne
+## Formulaire
 
-- Remplacer `https://france-solaire-paca.vercel.app` si le domaine final est different.
-- Ajouter l’email et l’adresse professionnelle exacte.
-- Remplacer les emplacements visuels par des photos reelles avant/apres.
-- Exécuter `supabase/schema.sql` dans le projet Supabase.
-- Définir `SUPABASE_URL` et `SUPABASE_SERVICE_ROLE_KEY` dans Vercel.
-- Ajouter les mentions legales et la politique de confidentialite.
-- Verifier les droits d'utilisation des visuels de demonstration avant publication. Les remplacer de preference par les photos originales France Solaire.
+L’API Vercel enregistre les demandes dans la table Supabase existante `france_solaire_leads`. Les variables `SUPABASE_URL` et `SUPABASE_SERVICE_ROLE_KEY` doivent rester définies dans Vercel.
 
-## Promesse prudente
+## À compléter avant la mise en ligne définitive
 
-Le site emploie une promesse volontairement defendable : recuperer la production perdue par l'encrassement, souvent estimee autour de 3 a 5% par an selon l'exposition du site. Eviter les promesses fixes et universelles.
-
-Sources utiles a citer dans les contenus longs :
-
-- IEA PVPS : soiling losses and PV performance
-- NREL : PV soiling measurement and losses
-- Google Search Central : LocalBusiness structured data
-- Google Business Profile Help : fiche d'etablissement et zones desservies
+- Remplacer l’espace Sanary par les photos et la vidéo drone réelles.
+- Joindre ou référencer les fiches techniques, PV et certifications du système appliqué.
+- Ajouter les mentions légales et une politique de confidentialité validées.
+- Vérifier le raccordement du domaine final au projet Vercel.

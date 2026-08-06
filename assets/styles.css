@@ -363,20 +363,51 @@ button[type="submit"]:focus-visible {
   overflow: hidden;
 }
 
+.hero-slides,
+.hero-slide {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slides {
+  z-index: 0;
+}
+
+.hero-slide {
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 1.2s ease, transform 6.5s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-slide-wide {
+  background-image: url("/assets/hero-industrial-roofcool.jpg");
+}
+
+.hero-slide-application {
+  background-image: url("/assets/application-cool-roof.webp");
+}
+
+.hero-slide-finition {
+  background-image: url("/assets/finition-cool-roof.webp");
+}
+
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(3, 35, 31, .93) 0%, rgba(3, 35, 31, .76) 47%, rgba(3, 35, 31, .15) 78%, rgba(3, 35, 31, .08) 100%),
-    url("/assets/hero-industrial-roofcool.jpg") center / cover no-repeat;
-  transform: scale(1.01);
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(3, 35, 31, .93) 0%, rgba(3, 35, 31, .76) 47%, rgba(3, 35, 31, .15) 78%, rgba(3, 35, 31, .08) 100%);
 }
 
 .pro-hero::before {
-  background:
-    linear-gradient(90deg, rgba(3, 35, 31, .96) 0%, rgba(3, 35, 31, .82) 44%, rgba(3, 35, 31, .28) 72%, rgba(3, 35, 31, .08) 100%),
-    url("/assets/hero-industrial-roofcool.jpg") center / cover no-repeat;
+  background: linear-gradient(90deg, rgba(3, 35, 31, .96) 0%, rgba(3, 35, 31, .82) 44%, rgba(3, 35, 31, .28) 72%, rgba(3, 35, 31, .08) 100%);
 }
 
 .hero::after {
@@ -388,11 +419,12 @@ button[type="submit"]:focus-visible {
   height: 460px;
   border: 75px solid rgba(255, 212, 0, .78);
   border-radius: 50%;
+  z-index: 1;
 }
 
 .hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   min-height: 750px;
@@ -1570,9 +1602,7 @@ button[type="submit"]:focus-visible {
   }
 
   .hero::before {
-    background:
-      linear-gradient(rgba(3,35,31,.88), rgba(3,35,31,.82)),
-      url("/assets/hero-industrial-roofcool.jpg") center / cover no-repeat;
+    background: linear-gradient(rgba(3,35,31,.88), rgba(3,35,31,.82));
   }
 
   .hero-inner {
@@ -1796,5 +1826,9 @@ button[type="submit"]:focus-visible {
   *::after {
     scroll-behavior: auto !important;
     transition: none !important;
+  }
+
+  .hero-slide {
+    transform: none;
   }
 }

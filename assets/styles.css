@@ -122,29 +122,60 @@ h3 {
 .brand {
   display: flex;
   align-items: center;
-  min-width: 312px;
+  min-width: 350px;
   color: var(--forest-deep);
   text-decoration: none;
 }
 
+.parent-brand {
+  display: block;
+  width: 112px;
+  flex: 0 0 auto;
+}
+
+.parent-brand img {
+  width: 112px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.brand-separator {
+  width: 1px;
+  height: 48px;
+  margin: 0 13px;
+  background: var(--line);
+}
+
 .brand-mark {
   position: relative;
-  width: 34px;
+  width: 48px;
   height: 52px;
   margin-right: 13px;
-  background: var(--signal);
+  background: var(--forest-deep);
   overflow: hidden;
+}
+
+.brand-mark::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  width: 23px;
+  height: 23px;
+  border-top: 6px solid var(--signal);
+  border-left: 6px solid var(--signal);
+  transform: rotate(45deg);
 }
 
 .brand-mark::after {
   content: "";
   position: absolute;
-  width: 54px;
-  height: 12px;
-  top: 20px;
-  left: -10px;
-  background: var(--forest);
-  transform: rotate(-19deg);
+  right: 8px;
+  bottom: 9px;
+  left: 8px;
+  height: 4px;
+  background: var(--white);
+  box-shadow: 0 -7px 0 var(--mint);
 }
 
 .brand-copy {
@@ -153,19 +184,20 @@ h3 {
 }
 
 .brand-copy strong {
-  max-width: 250px;
-  font-size: 17px;
+  max-width: 160px;
+  color: var(--forest-deep);
+  font-size: 19px;
   font-weight: 900;
-  letter-spacing: -.02em;
+  letter-spacing: -.04em;
   text-transform: uppercase;
 }
 
 .brand-copy small {
   margin-top: 7px;
   color: var(--forest);
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 850;
-  letter-spacing: .13em;
+  letter-spacing: .09em;
   text-transform: uppercase;
 }
 
@@ -173,7 +205,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 19px;
+  gap: 16px;
 }
 
 .nav-links > a {
@@ -277,6 +309,22 @@ button[type="submit"]:focus-visible {
   font-weight: 900 !important;
 }
 
+.nav-phones {
+  display: grid;
+  gap: 2px;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+}
+
+.nav-phones a {
+  color: var(--forest-deep);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .section-inner {
   width: min(100% - 40px, var(--max));
   margin: 0 auto;
@@ -321,8 +369,14 @@ button[type="submit"]:focus-visible {
   inset: 0;
   background:
     linear-gradient(90deg, rgba(3, 35, 31, .93) 0%, rgba(3, 35, 31, .76) 47%, rgba(3, 35, 31, .15) 78%, rgba(3, 35, 31, .08) 100%),
-    url("/assets/hero-cool-roof.webp") center / cover no-repeat;
+    url("/assets/hero-industrial-roofcool.jpg") center / cover no-repeat;
   transform: scale(1.01);
+}
+
+.pro-hero::before {
+  background:
+    linear-gradient(90deg, rgba(3, 35, 31, .96) 0%, rgba(3, 35, 31, .82) 44%, rgba(3, 35, 31, .28) 72%, rgba(3, 35, 31, .08) 100%),
+    url("/assets/hero-industrial-roofcool.jpg") center / cover no-repeat;
 }
 
 .hero::after {
@@ -381,7 +435,7 @@ button[type="submit"]:focus-visible {
   left: 50%;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: min(100% - 40px, var(--max));
   transform: translateX(-50%);
   background: var(--white);
@@ -414,6 +468,91 @@ button[type="submit"]:focus-visible {
   font-weight: 750;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.funding-section {
+  padding: 80px 0;
+  background: var(--forest-deep);
+  color: var(--white);
+}
+
+.funding-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 32px;
+}
+
+.funding-heading h2 {
+  max-width: 950px;
+  margin-top: 18px;
+  color: var(--white);
+}
+
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(260px, .72fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, .2);
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.funding-card,
+.funding-note {
+  min-height: 245px;
+  padding: 30px;
+  background: #0a4038;
+}
+
+.funding-card h3 {
+  margin: 22px 0 17px;
+  color: var(--white);
+}
+
+.funding-card p,
+.funding-note p {
+  color: rgba(255, 255, 255, .72);
+  font-size: 14px;
+}
+
+.funding-label {
+  color: var(--signal);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.funding-card a {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--signal);
+  font-size: 12px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.story-grid .image-stack .main-image {
+  width: 100%;
+}
+
+.funding-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--signal);
+  color: var(--forest-deep);
+}
+
+.funding-note strong {
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.funding-note p {
+  margin-top: 15px;
+  color: rgba(6, 47, 42, .78);
 }
 
 .band {
@@ -788,7 +927,13 @@ button[type="submit"]:focus-visible {
   min-height: 520px;
   background:
     linear-gradient(rgba(6,47,42,.25), rgba(6,47,42,.25)),
-    url("/assets/hero-cool-roof.webp") center / cover;
+    url("/assets/hero-industrial-roofcool.jpg") center / cover;
+}
+
+.pro-case-media {
+  background:
+    linear-gradient(rgba(6,47,42,.48), rgba(6,47,42,.48)),
+    url("/assets/application-cool-roof.webp") center / cover;
 }
 
 .video-placeholder {
@@ -876,6 +1021,19 @@ button[type="submit"]:focus-visible {
   font-size: clamp(2rem, 4.6vw, 4.2rem);
 }
 
+.trust-contact {
+  display: grid;
+  gap: 6px;
+  max-width: 360px;
+  color: var(--forest-deep);
+}
+
+.trust-contact span {
+  font-size: 12px;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
 .contact-banner {
   padding: 94px 0;
   background: var(--forest);
@@ -913,6 +1071,15 @@ button[type="submit"]:focus-visible {
   white-space: nowrap;
 }
 
+.secondary-phone {
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  color: rgba(255, 255, 255, .78);
+}
+
+.compact-actions {
+  margin-top: 9px;
+}
+
 .site-footer {
   padding: 72px 0 32px;
   background: #042722;
@@ -931,6 +1098,17 @@ button[type="submit"]:focus-visible {
   font-weight: 900;
   line-height: 1.1;
   text-transform: uppercase;
+}
+
+.footer-parent-logo {
+  width: 150px;
+  height: 75px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.case-band {
+  padding-top: 20px;
 }
 
 .site-footer p,
@@ -1126,6 +1304,57 @@ button[type="submit"]:focus-visible {
   font-size: clamp(2rem, 4vw, 3.2rem);
 }
 
+.callback-panel {
+  border-top: 8px solid var(--signal);
+}
+
+.callback-intro {
+  margin: -12px 0 28px;
+  color: var(--muted);
+}
+
+.single-fields {
+  grid-template-columns: 1fr;
+}
+
+.contact-side-title {
+  margin: 18px 0 28px;
+}
+
+.direct-phone-list {
+  display: grid;
+  gap: 12px;
+}
+
+.direct-phone-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  background: var(--forest-deep);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.direct-phone-list a:hover,
+.direct-phone-list a:focus-visible {
+  background: var(--forest);
+}
+
+.direct-phone-list span {
+  color: var(--signal);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.direct-phone-list strong {
+  font-size: clamp(1.2rem, 2.3vw, 1.8rem);
+  line-height: 1;
+}
+
 .field-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1298,6 +1527,16 @@ button[type="submit"]:focus-visible {
     margin-top: 8px;
   }
 
+  .nav-phones {
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .nav-phones a {
+    font-size: 14px;
+  }
+
   .hero,
   .hero-inner {
     min-height: 720px;
@@ -1333,7 +1572,7 @@ button[type="submit"]:focus-visible {
   .hero::before {
     background:
       linear-gradient(rgba(3,35,31,.88), rgba(3,35,31,.82)),
-      url("/assets/hero-cool-roof.webp") center / cover no-repeat;
+      url("/assets/hero-industrial-roofcool.jpg") center / cover no-repeat;
   }
 
   .hero-inner {
@@ -1345,20 +1584,13 @@ button[type="submit"]:focus-visible {
     position: relative;
     left: auto;
     bottom: auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     transform: none;
   }
 
-  .proof-item:nth-child(2) {
-    border-right: 0;
-  }
-
-  .proof-item:nth-child(-n+2) {
-    border-bottom: 1px solid var(--line);
-  }
-
   .section-heading,
+  .funding-heading,
   .story-grid,
   .two-col,
   .performance-panel,
@@ -1369,6 +1601,22 @@ button[type="submit"]:focus-visible {
   .detail-grid,
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .funding-section {
+    padding: 78px 0;
+  }
+
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-heading {
+    align-items: start;
+  }
+
+  .funding-heading .button {
+    justify-self: start;
   }
 
   .section-heading {
@@ -1415,8 +1663,17 @@ button[type="submit"]:focus-visible {
     width: min(100% - 28px, var(--max));
   }
 
+  .hero-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-item {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
   .brand-copy strong {
-    max-width: 190px;
+    max-width: 105px;
     font-size: 14px;
   }
 
@@ -1425,8 +1682,24 @@ button[type="submit"]:focus-visible {
   }
 
   .brand-mark {
-    width: 28px;
+    display: none;
+  }
+
+  .brand-separator {
+    display: none;
+  }
+
+  .parent-brand,
+  .parent-brand img {
+    width: 88px;
+  }
+
+  .parent-brand img {
     height: 47px;
+  }
+
+  .roofcool-brand {
+    gap: 9px;
   }
 
   .hero-inner {
@@ -1444,6 +1717,10 @@ button[type="submit"]:focus-visible {
 
   .cta-row,
   .cta-row .button {
+    width: 100%;
+  }
+
+  .compact-actions {
     width: 100%;
   }
 

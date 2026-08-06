@@ -1,4 +1,5 @@
 const MAX_LENGTHS = {
+  mode: 30,
   entreprise: 160,
   contact: 160,
   telephone: 50,
@@ -46,15 +47,24 @@ module.exports = async function handler(req, res) {
     ]),
   );
 
+  const isCallback = lead.mode === "rappel";
+
+  if (!lead.contact || !lead.telephone) {
+    return res.status(400).send("Merci de compléter les champs obligatoires.");
+  }
+
   if (
-    !lead.entreprise ||
-    !lead.contact ||
-    !lead.telephone ||
-    !lead.email ||
-    !lead.commune ||
-    !lead.besoin
+    !isCallback &&
+    (!lead.entreprise || !lead.email || !lead.commune || !lead.besoin)
   ) {
     return res.status(400).send("Merci de compléter les champs obligatoires.");
+  }
+
+  if (isCallback) {
+    lead.entreprise ||= "Demande de rappel";
+    lead.email ||= "non-renseigne@rappel.local";
+    lead.commune ||= "Non renseignée";
+    lead.besoin = "Demande de rappel Roof Cool";
   }
 
   const supabaseUrl = process.env.SUPABASE_URL;
@@ -77,7 +87,10 @@ module.exports = async function handler(req, res) {
       },
       body: JSON.stringify({
         ...lead,
-        source: "france-toiture-reflechissante",
+        mode: undefined,
+        source: isCallback
+          ? "france-toiture-reflechissante-rappel"
+          : "france-toiture-reflechissante",
         user_agent: clean(req.headers["user-agent"], 500),
       }),
     },

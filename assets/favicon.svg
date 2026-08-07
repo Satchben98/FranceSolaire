@@ -1,5 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#26333f"/>
-  <path d="M10 45h44v7H10z" fill="#f2c230"/>
-  <path d="M14 13h36v8H23v9h23v8H23v14h-9z" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Toiture Roof Cool peinte">
+  <rect width="64" height="64" fill="#ffd400"/>
+  <path fill="#111111" d="M7 30.5 32 8l25 22.5-7.2 7.8L32 22.2 14.2 38.3z"/>
+  <path fill="#111111" d="M12 42h33v8H12z"/>
+  <path fill="#111111" d="M45 44h3.5c5.8 0 9.5 3.5 9.5 9v1h-7v-1c0-1.7-.7-2.5-2.5-2.5H45z"/>
+  <rect x="51" y="51" width="7" height="12" rx="3.5" fill="#111111"/>
 </svg>

@@ -148,35 +148,11 @@ h3 {
 }
 
 .brand-mark {
-  position: relative;
-  width: 48px;
+  width: 52px;
   height: 52px;
   margin-right: 13px;
-  background: var(--forest-deep);
-  overflow: hidden;
-}
-
-.brand-mark::before {
-  content: "";
-  position: absolute;
-  top: 11px;
-  left: 12px;
-  width: 23px;
-  height: 23px;
-  border-top: 6px solid var(--signal);
-  border-left: 6px solid var(--signal);
-  transform: rotate(45deg);
-}
-
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  right: 8px;
-  bottom: 9px;
-  left: 8px;
-  height: 4px;
-  background: var(--white);
-  box-shadow: 0 -7px 0 var(--mint);
+  flex: 0 0 auto;
+  background: var(--signal) url("/assets/favicon.svg?v=2") center / cover no-repeat;
 }
 
 .brand-copy {

@@ -1,16 +1,16 @@
 :root {
-  --forest: #0e5e51;
-  --forest-dark: #083f38;
-  --forest-deep: #062f2a;
-  --mint: #45af9b;
-  --signal: #ffd400;
-  --ink: #14201d;
-  --muted: #5d6965;
-  --paper: #f5f4ee;
+  --forest: #1a1a1a;
+  --forest-dark: #0d0d0d;
+  --forest-deep: #000000;
+  --mint: #ffe51a;
+  --signal: #ffe51a;
+  --ink: #111111;
+  --muted: #626262;
+  --paper: #f3f2ed;
   --white: #ffffff;
-  --line: #d9ded9;
+  --line: #d8d7d1;
   --max: 1240px;
-  --shadow: 0 24px 70px rgba(6, 47, 42, .14);
+  --shadow: 0 24px 70px rgba(0, 0, 0, .15);
 }
 
 * {
@@ -104,8 +104,8 @@ h3 {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, .97);
-  border-bottom: 1px solid rgba(14, 94, 81, .14);
+  background: rgba(255, 229, 26, .98);
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
   backdrop-filter: blur(12px);
 }
 
@@ -143,7 +143,7 @@ h3 {
   width: 1px;
   height: 48px;
   margin: 0 13px;
-  background: var(--line);
+  background: rgba(0, 0, 0, .26);
 }
 
 .brand-mark {
@@ -209,7 +209,7 @@ h3 {
 }
 
 .nav-links > a {
-  color: #3d4b47;
+  color: #111111;
   font-size: 13px;
   font-weight: 750;
   text-decoration: none;
@@ -219,7 +219,10 @@ h3 {
 .nav-links > a:hover,
 .nav-links > a:focus-visible,
 .nav-links > a[aria-current="page"] {
-  color: var(--forest);
+  color: #000000;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
 }
 
 .menu-toggle {
@@ -228,8 +231,8 @@ h3 {
   height: 48px;
   padding: 0;
   border: 0;
-  background: var(--forest);
-  color: var(--white);
+  background: var(--forest-deep);
+  color: var(--signal);
   font: inherit;
   font-size: 0;
   cursor: pointer;
@@ -278,13 +281,13 @@ button[type="submit"]:focus-visible {
 .button.dark {
   border-color: var(--forest-deep);
   background: var(--forest-deep);
-  color: var(--white);
+  color: var(--signal);
 }
 
 .button.dark:hover,
 .button.dark:focus-visible {
-  border-color: var(--forest);
-  background: var(--forest);
+  border-color: #333333;
+  background: #333333;
 }
 
 .button.outline {
@@ -301,7 +304,18 @@ button[type="submit"]:focus-visible {
 }
 
 .nav-links .nav-cta {
-  color: var(--ink);
+  border-color: var(--forest-deep);
+  background: var(--forest-deep);
+  color: var(--signal);
+  text-decoration: none;
+}
+
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta:focus-visible {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--forest-deep);
+  text-decoration: none;
 }
 
 .phone-link {
@@ -313,7 +327,7 @@ button[type="submit"]:focus-visible {
   display: grid;
   gap: 2px;
   padding-left: 14px;
-  border-left: 1px solid var(--line);
+  border-left: 1px solid rgba(0, 0, 0, .24);
 }
 
 .nav-phones a {
@@ -390,12 +404,12 @@ button[type="submit"]:focus-visible {
   background-image: url("/assets/hero-industrial-roofcool.jpg");
 }
 
-.hero-slide-application {
-  background-image: url("/assets/application-cool-roof.webp");
+.hero-slide-team {
+  background-image: url("/assets/hero-roofcool-team-wide.jpg");
 }
 
-.hero-slide-finition {
-  background-image: url("/assets/finition-cool-roof.webp");
+.hero-slide-public {
+  background-image: url("/assets/hero-roofcool-public-wide.jpg");
 }
 
 .hero::before {
@@ -403,11 +417,11 @@ button[type="submit"]:focus-visible {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(3, 35, 31, .93) 0%, rgba(3, 35, 31, .76) 47%, rgba(3, 35, 31, .15) 78%, rgba(3, 35, 31, .08) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, .94) 0%, rgba(0, 0, 0, .78) 47%, rgba(0, 0, 0, .2) 78%, rgba(0, 0, 0, .08) 100%);
 }
 
 .pro-hero::before {
-  background: linear-gradient(90deg, rgba(3, 35, 31, .96) 0%, rgba(3, 35, 31, .82) 44%, rgba(3, 35, 31, .28) 72%, rgba(3, 35, 31, .08) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .84) 44%, rgba(0, 0, 0, .32) 72%, rgba(0, 0, 0, .08) 100%);
 }
 
 .hero::after {
@@ -470,7 +484,7 @@ button[type="submit"]:focus-visible {
   grid-template-columns: repeat(3, 1fr);
   width: min(100% - 40px, var(--max));
   transform: translateX(-50%);
-  background: var(--white);
+  background: var(--signal);
   color: var(--ink);
   box-shadow: var(--shadow);
 }
@@ -478,7 +492,7 @@ button[type="submit"]:focus-visible {
 .proof-item {
   min-height: 116px;
   padding: 25px 27px;
-  border-right: 1px solid var(--line);
+  border-right: 1px solid rgba(0, 0, 0, .2);
 }
 
 .proof-item:last-child {
@@ -487,7 +501,7 @@ button[type="submit"]:focus-visible {
 
 .proof-item strong {
   display: block;
-  color: var(--forest);
+  color: var(--forest-deep);
   font-size: 29px;
   line-height: 1;
 }
@@ -495,7 +509,7 @@ button[type="submit"]:focus-visible {
 .proof-item span {
   display: block;
   margin-top: 9px;
-  color: var(--muted);
+  color: rgba(0, 0, 0, .68);
   font-size: 12px;
   font-weight: 750;
   line-height: 1.35;
@@ -534,7 +548,7 @@ button[type="submit"]:focus-visible {
 .funding-note {
   min-height: 245px;
   padding: 30px;
-  background: #0a4038;
+  background: #171717;
 }
 
 .funding-card h3 {
@@ -584,7 +598,7 @@ button[type="submit"]:focus-visible {
 
 .funding-note p {
   margin-top: 15px;
-  color: rgba(6, 47, 42, .78);
+  color: rgba(0, 0, 0, .72);
 }
 
 .band {
@@ -760,7 +774,7 @@ button[type="submit"]:focus-visible {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(3, 35, 31, .95), rgba(3, 35, 31, .1));
+  background: linear-gradient(0deg, rgba(0, 0, 0, .95), rgba(0, 0, 0, .08));
   z-index: 1;
 }
 
@@ -810,14 +824,14 @@ button[type="submit"]:focus-visible {
   min-height: 280px;
   padding: 35px;
   background: var(--white);
-  border-top: 6px solid var(--forest);
+  border-top: 6px solid var(--signal);
 }
 
 .support-card .index,
 .value-card .index {
   display: block;
   margin-bottom: 55px;
-  color: var(--mint);
+  color: #8a7000;
   font-size: 14px;
   font-weight: 900;
 }
@@ -958,13 +972,13 @@ button[type="submit"]:focus-visible {
   position: relative;
   min-height: 520px;
   background:
-    linear-gradient(rgba(6,47,42,.25), rgba(6,47,42,.25)),
+    linear-gradient(rgba(0,0,0,.22), rgba(0,0,0,.22)),
     url("/assets/hero-industrial-roofcool.jpg") center / cover;
 }
 
 .pro-case-media {
   background:
-    linear-gradient(rgba(6,47,42,.48), rgba(6,47,42,.48)),
+    linear-gradient(rgba(0,0,0,.46), rgba(0,0,0,.46)),
     url("/assets/application-cool-roof.webp") center / cover;
 }
 
@@ -1114,7 +1128,7 @@ button[type="submit"]:focus-visible {
 
 .site-footer {
   padding: 72px 0 32px;
-  background: #042722;
+  background: #000000;
   color: var(--white);
 }
 
@@ -1141,6 +1155,83 @@ button[type="submit"]:focus-visible {
 
 .case-band {
   padding-top: 20px;
+}
+
+.sequence-heading {
+  margin-bottom: 38px;
+}
+
+.roof-sequence {
+  margin: 0;
+  background: var(--forest-deep);
+  box-shadow: var(--shadow);
+}
+
+.roof-sequence img {
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+.sequence-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--signal);
+  color: var(--forest-deep);
+}
+
+.sequence-steps span {
+  display: grid;
+  gap: 4px;
+  padding: 22px 26px;
+  border-right: 1px solid rgba(0, 0, 0, .22);
+}
+
+.sequence-steps span:last-child {
+  border-right: 0;
+}
+
+.sequence-steps strong {
+  font-size: 19px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.sequence-steps small {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.sequence-reference {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 38px 0 0;
+}
+
+.sequence-reference > div {
+  display: grid;
+  gap: 10px;
+}
+
+.sequence-reference > div > strong {
+  color: var(--forest-deep);
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sequence-reference p {
+  color: var(--muted);
+}
+
+.sequence-note {
+  margin-top: 17px;
+  color: var(--muted);
+  font-size: 11px;
 }
 
 .site-footer p,
@@ -1432,7 +1523,7 @@ button[type="submit"]:focus-visible {
 .field select:focus,
 .field textarea:focus {
   border-color: var(--forest);
-  outline: 3px solid rgba(69,175,155,.18);
+  outline: 3px solid rgba(255,229,26,.35);
 }
 
 .form-note {
@@ -1541,8 +1632,8 @@ button[type="submit"]:focus-visible {
     display: none;
     align-items: stretch;
     padding: 24px 20px 35px;
-    background: var(--white);
-    border-bottom: 1px solid var(--line);
+    background: var(--signal);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
     box-shadow: var(--shadow);
   }
 
@@ -1602,7 +1693,7 @@ button[type="submit"]:focus-visible {
   }
 
   .hero::before {
-    background: linear-gradient(rgba(3,35,31,.88), rgba(3,35,31,.82));
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.84));
   }
 
   .hero-inner {
@@ -1647,6 +1738,11 @@ button[type="submit"]:focus-visible {
 
   .funding-heading .button {
     justify-self: start;
+  }
+
+  .sequence-reference {
+    align-items: start;
+    flex-direction: column;
   }
 
   .section-heading {
@@ -1700,6 +1796,18 @@ button[type="submit"]:focus-visible {
   .proof-item {
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .sequence-steps span {
+    padding: 16px 10px;
+  }
+
+  .sequence-steps strong {
+    font-size: 14px;
+  }
+
+  .sequence-steps small {
+    font-size: 8px;
   }
 
   .brand-copy strong {

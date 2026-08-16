@@ -4,6 +4,7 @@
   --forest-deep: #193f36;
   --mint: #83b7a6;
   --signal: #f3d642;
+  --tracage-yellow: #ffe51a;
   --ink: #21302c;
   --muted: #62706b;
   --paper: #f5f7f3;
@@ -146,13 +147,24 @@ h3 {
 }
 
 .brand-mark {
+  position: relative;
   width: 176px;
   height: 74px;
   margin-right: 0;
   flex: 0 0 auto;
   border-radius: 7px;
-  background: url("/assets/france-roof-cooling-logo-wide.png?v=1") center / cover no-repeat;
+  background: var(--tracage-yellow);
+  isolation: isolate;
   overflow: hidden;
+}
+
+.brand-mark::before {
+  position: absolute;
+  inset: 0;
+  background: url("/assets/france-roof-cooling-logo-wide.png?v=1") center / cover no-repeat;
+  content: "";
+  filter: grayscale(1) brightness(1.75) contrast(3);
+  mix-blend-mode: multiply;
 }
 
 .brand-copy {

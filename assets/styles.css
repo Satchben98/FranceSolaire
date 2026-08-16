@@ -151,7 +151,7 @@ h3 {
   margin-right: 0;
   flex: 0 0 auto;
   border-radius: 7px;
-  background: var(--signal) url("/assets/france-roof-cooling-logo.png?v=1") center 40% / 90% auto no-repeat;
+  background: var(--signal) url("/assets/france-roof-cooling-logo-wide.png?v=1") center / contain no-repeat;
   overflow: hidden;
 }
 
@@ -730,7 +730,8 @@ button[type="submit"]:focus-visible {
   width: 112px;
   height: 43px;
   border-radius: 5px;
-  object-fit: cover;
+  background: var(--signal);
+  object-fit: contain;
   object-position: center;
 }
 

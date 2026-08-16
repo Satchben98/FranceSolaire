@@ -147,11 +147,11 @@ h3 {
 
 .brand-mark {
   width: 176px;
-  height: 66px;
+  height: 74px;
   margin-right: 0;
   flex: 0 0 auto;
   border-radius: 7px;
-  background: var(--signal) url("/assets/france-roof-cooling-logo.png?v=1") center 40% / 100% auto no-repeat;
+  background: var(--signal) url("/assets/france-roof-cooling-logo.png?v=1") center 40% / 90% auto no-repeat;
   overflow: hidden;
 }
 
@@ -2029,7 +2029,7 @@ button[type="submit"]:focus-visible {
   .brand-mark {
     display: block;
     width: 128px;
-    height: 56px;
+    height: 62px;
     margin-right: 0;
   }
 

@@ -161,7 +161,7 @@ h3 {
 .brand-mark::before {
   position: absolute;
   inset: 0;
-  background: url("/assets/france-roof-cooling-logo-wide.png?v=1") center / cover no-repeat;
+  background: url("/assets/france-roof-cooling-logo-v2.png") center / cover no-repeat;
   content: "";
   filter: grayscale(1) brightness(1.75) contrast(3);
   mix-blend-mode: multiply;

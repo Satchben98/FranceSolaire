@@ -421,12 +421,12 @@ button[type="submit"]:focus-visible {
   max-width: 880px;
   margin: 27px auto;
   color: var(--white);
+  font-weight: 400;
 }
 
-.hero h1 em {
+.hero h1 strong {
   color: var(--white);
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .hero .lead {

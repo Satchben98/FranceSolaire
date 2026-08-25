@@ -2,6 +2,16 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/solution-roof-cool",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/solution-roof-cool/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/solution-roof-cool/:path*",
       "destination": "/",
       "permanent": true

@@ -149,8 +149,15 @@ h3 {
 }
 
 .brand-mark {
+  display: block;
   width: 184px;
   height: 74px;
+}
+
+.brand-home {
+  display: block;
+  flex: 0 0 auto;
+  text-decoration: none;
 }
 
 .brand-endorsement {
@@ -163,6 +170,7 @@ h3 {
   font-weight: 750;
   line-height: 1.3;
   letter-spacing: .06em;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -172,6 +180,13 @@ h3 {
   font-size: 12px;
   font-weight: 900;
   letter-spacing: -.01em;
+}
+
+.brand-endorsement:hover,
+.brand-endorsement:focus-visible,
+.brand-endorsement:hover strong,
+.brand-endorsement:focus-visible strong {
+  color: var(--forest);
 }
 
 .nav-links {
@@ -767,26 +782,10 @@ button[type="submit"]:focus-visible {
 }
 
 .reflection-label {
-  top: 26px;
-  right: 12px;
-  max-width: 100px;
+  top: 8px;
+  right: 11px;
+  max-width: 110px;
   color: var(--forest);
-  text-align: right;
-}
-
-.emissivity-label {
-  top: 67px;
-  right: 12px;
-  max-width: 100px;
-  color: var(--forest-dark);
-  text-align: right;
-}
-
-.heat-label {
-  right: 10px;
-  bottom: 8px;
-  max-width: 116px;
-  color: var(--forest-dark);
   text-align: right;
 }
 
@@ -900,6 +899,44 @@ button[type="submit"]:focus-visible {
 .heat-one { left: 46%; }
 .heat-two { left: 54%; }
 
+.diagram-data {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7faf8;
+}
+
+.diagram-data div {
+  min-width: 0;
+  padding: 9px 8px;
+  border-right: 1px solid var(--line);
+}
+
+.diagram-data div:last-child {
+  border-right: 0;
+}
+
+.diagram-data strong {
+  display: block;
+  color: var(--forest-dark);
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.diagram-data span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 7.5px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .cooling-diagram > p {
   margin-top: 11px;
   color: var(--muted);
@@ -961,6 +998,18 @@ button[type="submit"]:focus-visible {
 
 .text-link.light {
   color: var(--white);
+}
+
+.inline-link {
+  color: var(--forest-dark);
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  color: var(--forest);
 }
 
 .sector-grid,
@@ -1124,6 +1173,18 @@ button[type="submit"]:focus-visible {
   color: var(--signal);
   font-size: 31px;
   line-height: 1;
+  white-space: nowrap;
+}
+
+.metric small {
+  display: block;
+  margin-bottom: 7px;
+  color: rgba(255,255,255,.68);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .06em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .metric span {

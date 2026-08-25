@@ -2,8 +2,13 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/solution-roof-cool/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/nettoyage-panneaux-solaires/:path*",
-      "destination": "/solution-roof-cool/",
+      "destination": "/",
       "permanent": true
     },
     {

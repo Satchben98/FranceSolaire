@@ -19,7 +19,6 @@ Puis ouvrir `http://localhost:8080`.
 ## Pages
 
 - `/` : accueil et conversion
-- `/solution-roof-cool/` : principe du Cool Roof
 - `/performances/` : indicateurs et limites
 - `/applications-supports/` : bâtiments et supports
 - `/methode-securite/` : protocole chantier

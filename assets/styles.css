@@ -1012,6 +1012,68 @@ button[type="submit"]:focus-visible {
   color: var(--forest);
 }
 
+.french-product-proof {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  margin: 26px 0 4px;
+  padding: 17px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 10px 28px rgba(25, 63, 54, .08);
+}
+
+.france-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #dce5e1;
+  border-radius: 50%;
+  background: #f6f8f7;
+}
+
+.france-icon::before {
+  width: 34px;
+  height: 23px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #0055a4 0 33.333%, #fff 33.333% 66.666%, #ef4135 66.666% 100%);
+  box-shadow: 0 2px 7px rgba(25, 63, 54, .16);
+  content: "";
+}
+
+.french-product-copy {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 3px 13px;
+}
+
+.french-product-copy > span {
+  grid-column: 1 / -1;
+  color: var(--forest);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.french-product-copy strong {
+  color: var(--forest-deep);
+  font-size: 24px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.french-product-copy small {
+  color: var(--muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .sector-grid,
 .support-grid,
 .metric-grid,
@@ -2225,6 +2287,31 @@ button[type="submit"]:focus-visible {
 
   .diagram-scene {
     height: 210px;
+  }
+
+  .french-product-proof {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .france-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .france-icon::before {
+    width: 29px;
+    height: 20px;
+  }
+
+  .french-product-copy {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .french-product-copy > span {
+    grid-column: auto;
   }
 
   .reflection-one { left: 58%; }

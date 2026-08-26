@@ -778,7 +778,8 @@ button[type="submit"]:focus-visible {
 .solar-label {
   top: 8px;
   left: 11px;
-  max-width: 120px;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .reflection-label {

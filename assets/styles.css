@@ -1063,6 +1063,7 @@ button[type="submit"]:focus-visible {
 }
 
 .france-icon::before {
+  display: block;
   width: 34px;
   height: 23px;
   border-radius: 3px;

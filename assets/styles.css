@@ -492,6 +492,26 @@ button[type="submit"]:focus-visible {
   text-transform: uppercase;
 }
 
+.proof-benefit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.proof-benefit .proof-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  color: inherit;
+  font-size: 30px;
+  line-height: 1;
+  text-transform: none;
+}
+
+.proof-benefit strong {
+  font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+  line-height: 1.15;
+}
+
 .funding-section {
   padding: 80px 0;
   background: #eaf1ed;
@@ -2226,6 +2246,18 @@ button[type="submit"]:focus-visible {
 
   .proof-item strong {
     font-size: 24px;
+  }
+
+  .proof-benefit {
+    min-height: 88px;
+  }
+
+  .proof-benefit .proof-icon {
+    font-size: 27px;
+  }
+
+  .proof-benefit strong {
+    font-size: 20px;
   }
 
   .image-stack {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://france-roof-cooling.vercel.app/sitemap.xml
+Sitemap: https://france-roof-cooling.fr/sitemap.xml

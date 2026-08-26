@@ -500,6 +500,8 @@ button[type="submit"]:focus-visible {
 }
 
 .proof-french .france-icon {
+  display: grid;
+  place-items: center;
   margin: 0;
 }
 
@@ -1598,6 +1600,7 @@ button[type="submit"]:focus-visible {
 .sequence-reference > div {
   display: grid;
   gap: 10px;
+  flex: 1;
 }
 
 .sequence-reference > div > strong {
@@ -1608,6 +1611,35 @@ button[type="submit"]:focus-visible {
 
 .sequence-reference p {
   color: var(--muted);
+}
+
+.reference-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 8px;
+}
+
+.reference-list > div {
+  padding-right: 22px;
+  border-right: 1px solid var(--line);
+}
+
+.reference-list > div:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.reference-list strong {
+  display: block;
+  color: var(--forest-deep);
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  line-height: 1.12;
+}
+
+.reference-list p {
+  margin-top: 8px;
+  font-size: 13px;
 }
 
 .sequence-note {
@@ -2123,6 +2155,22 @@ button[type="submit"]:focus-visible {
   .sequence-reference {
     align-items: start;
     flex-direction: column;
+  }
+
+  .reference-list {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .reference-list > div {
+    padding: 0 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .reference-list > div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 
   .section-heading {
